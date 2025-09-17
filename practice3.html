@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EECS348 Lab3 Practice3</title>
+
+</head>
+<body>
+
+<h1>Practice 3, Passsword Verification</h1>
+<script>
+
+function check_pass() {
+      let p1 = document.getElementById("pass1").value;
+      let p2 = document.getElementById("pass2").value;
+
+      if (p1.length < 8) { //Check first password for length, dont need second since need to match
+        alert("Password must be at least 8 characters long.");
+      } //The TA example checks the first and second password lengths but it doesn't say to do that specifically
+
+      else if (p1 !== p2) { //If p1 doesnt match p2 alert it
+        alert("Passwords do not match.");
+      }
+      else { //If the passwords are correct length and match alert it
+        alert("Passwords match!");
+      }
+    }
+
+</script>
+
+First Password: <input type="text" id="pass1" value> <!--Input boxes with no default values-->
+<br>
+Second Password: <input type="text" id="pass2" value>
+<br>
+<button onclick="check_pass()">Validate Your Passwords!</button> <!--Call function alert_paragraph_color on click-->
+</body>
+</html>

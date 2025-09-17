@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EECS348 Lab3 Practice2</title>
+
+</head>
+<body>
+
+<h1>Practice 2, CSS Paragraph Changer</h1>
+<div id="paragraph"> This text will be changed. </div>
+<script>
+function alert_paragraph_color() {
+
+      let text = document.getElementById("paragraph");//Get the text to be changed
+
+      let br = document.getElementById("border_R").value; //Make let vars for values of border color
+      let bg = document.getElementById("border_G").value;
+      let bb = document.getElementById("border_B").value;
+
+      let bw = document.getElementById("border_width").value; //Make border width let var
+
+      let r = document.getElementById("bg_R").value; //Make background color let vars
+      let g = document.getElementById("bg_G").value;
+      let b = document.getElementById("bg_B").value;
+
+      text.style.border = bw + "px solid rgb(" + br + "," + bg + "," + bb + ")"; //Make the border the triple of rgb entered
+      text.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";//Make the background the triple of rgb entered 
+    }
+</script>
+
+Border R(0-255): <input type="text" id="border_R" value> <!--Input boxes with no default values-->
+<br>
+Border G(0-255): <input type="text" id="border_G" value>
+<br>
+Border B(0-255): <input type="text" id="border_B" value>
+<br>
+Border Width: <input type="text" id="border_width" value>
+<br>
+Background R(0-255): <input type="text" id="bg_R" value>
+<br>
+Background G(0-255): <input type="text" id="bg_G" value>
+<br>
+Background B(0-255): <input type="text" id="bg_B" value>
+<br>
+<button onclick="alert_paragraph_color()">Change the color!</button> <!--Call function alert_paragraph_color on click-->
+</body>
+</html>
